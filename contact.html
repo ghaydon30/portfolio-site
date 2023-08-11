@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--This is the standard head code used when making an HTML page. I will type this out every time for now-->
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+    <!--This last link connects the the styles.css sheet-->
+</head>
+
+<body>
+    <!-- <header>
+        COMMENT - Place header items in here
+        <h1>Contact Page</h1>
+        <nav>
+            <img src="http://via.placeholder.com/200x70" alt="">
+            COMMENT - The above code is a placeholder image for the top left website logo (displayed as name on example),
+                img src "then url source goes in quotes" and alt gives text that will be displayed in it's place
+                in a particular size
+            <ul role="menubar">
+                <li role="presentation">
+                    <a href="index.html">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html">About Me</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+            COMMENT - The above code is a menu bar for the site, a href= creates a hyperlink with given text,
+                <ul> and <li> elements make up the list
+        </nav>
+    </header> -->
+    <header class="page-header">
+        <!--Place header items in here-->
+        <!--<div class="header">-->
+                <img src="img/logo.svg" 
+                class="page-header__item" alt="logo">
+                <!--The above code is a placeholder image for the top left website logo (displayed as name on example),
+                    img src "then url source goes in quotes" and alt gives text that will be displayed in it's place
+                    in a particular size-->
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">My Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                </ul>
+                <!--The above code is a menu bar for the site, a href= creates a hyperlink with given text,
+                    <ul> and <li> elements make up the list-->
+            </nav>
+        <!--</div>-->
+    </header>
+    <main>
+        <h2>Greg Haydon</h2>
+        Austin Texas<br>
+        78704<br>
+        <br>
+        <a href="mailto:ghaydon30@gmail.com">Contact me!</a><br>
+        <br>
+        Phone: <a aria-label="contact phone number" href="tel:+1-973-479-7998">+1 (973) 479-7998</a><br>
+        Skype: <a href="skype:hello.careerfoundry"> hello.careerfoundry</a> (placeholder)<br>
+        Email: <a href="mailto:ghaydon30@gmail.com">ghaydon30@gmail.com</a>
+    
+        <h3>Contact Form</h3>
+        <form action="dialog" method="post" id="contact-form">
+            <!-- Dialog is set to attribute action when this attribute should be ignored
+            (for now) -->
+            <label class="standard-label" for="contact-email">E-mail: </label>
+            <input type="email" id="contact-email" required><br><br>
+
+            <!--The for and id of contact-email now states that the label belongs to 
+            that specific input field. This will go to fiewld when you click on label-->
+
+            <label class="standard-label" for="contact-phone">Telephone: </label>
+            <input type="tel" id="contact-phone" pattern="\d{3}[\-]\d{4}"><br><br>
+
+            <!--The pattern is called a regular expression (RegEx) that imposes
+            a telephone (in this case) format on the user
+            NOTE: put a note in the actual website outling to user-->
+
+            <label class="standard-label" for="contact-message">Message: </label><br>
+            <textarea maxlength="240" id="contact-message" required></textarea><br><br>
+
+            <!--Notice how a class is used for standard-label, and an ID is used
+            fot the contact form itself because there will only be one 
+            Contact form-->
+
+            <input type="submit" value="Send message">
+        </form>
+    </main>
+    
+    <!-- Footer with links to social medie profiles -->
+    <footer class="page-footer">
+        <!--Place footer text in here-->
+            <p>Find me on</p>
+            <div class="social_media">
+            <img src="./img/github_icon.svg" alt="github">
+            <img src="./img/twitter_icon.svg" alt="twitter">
+            <img src="./img/linkedin_icon.svg" alt="linkedIn">
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+/* ADDING VARIABLES IN :ROOT PSEUDO CLASS */
+:root {
+    /* General Variables */
+    --background-color: lightgray;
+    --primary-color: #0B0B45;
+    --secondary-color: #2b2b2b;
+    --text-color: #000000;
+    --grid-color: #ffffff;
+    --reg-font-weight: 400;
+    --bold-font-weight: 700;
+    --body-font-size: 16px;
+    --line-height: 1.6;
+    --general-padding: 20px;
+    --general-grid-gap: 20px;
+    --general-opacity: 0.6;
+    --outline-width: 2px;
+    --border-width: 2px;
+
+    /* Heading Variables */
+    --h1__size: 30px;
+    --h2__size: 24px;
+    --h3__size: 18px;
+
+    /* Link Variables */
+    --visited-link-color: purple;
+    --hovered-link-color: red;
+    --selected-link-color: green;
+    --focus-link-color: red;
+    --active-link-color: green;
+
+    /* Button Variables */
+    --button-padding: 10px;
+    --button-text-color: #ffffff;
+    --visited-button-color: purple;
+    --active-button-color: lightblue;
+    --focus-button-color: red;
+    --active-button-color: green;
+
+    /* Animation Variables */
+    --sunstate-initial: #edc655;
+    --sunstate-intermediary: #fcffad;
+    --sunstate-final: #f76414;
+}
+
+/* SELECTOR CREATES A BOX SIZE THAT WILL AUTOREGULATE ALL BORDERS / MARGINS
+TO SIZE OF ELEMENT */
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: var(--reg-font-weight);
+    font-style: normal;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    padding-left: var(--general-grid-gap);
+    padding-right: var(--general-grid-gap);
+}
+
+/* HEADING DEFINITIONS */
+h1 {
+    font-size: var(--h1__size);
+    font-weight: var(--bold-font-weight);
+}
+h2 {
+    font-size: var(--h2__size);
+    font-weight: var(--bold-font-weight);
+}
+h3 {
+    font-size: var(--h3__size);
+    font-weight: var(--bold-font-weight);
+}
+a {
+    color: var(--primary-color);
+}
+
+/* LINK PROPERTIES */
+a:visited {
+    /* visited link */
+    color: var(--visited-link-color);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--hovered-link-color);
+    /* No underlining when hovering over a link */
+}
+a:focus {
+    outline: var(--outline-width) solid var(--focus-link-color);
+}
+a:active {
+    /* selected link */
+    color: var(--active-link-color);
+}
+
+/* BUTTON PROPERTIES */
+button, 
+.button {
+    /* overwrites browser default and resets the border */
+    border: none;
+    /* Takes font from outer container */
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    font-size: var(--body-font-size);
+    padding: var(--button-padding);
+    border-radius: 3px;
+    border-bottom: var(--border-width) solid rgba(0, 0, 0, 0.3);
+    transition: opacity, 0.5s;
+}
+button:visited,
+.button:visited {
+    background-color: var(--visited-button-color);
+}
+button:hover,
+.button:hover {
+    cursor: pointer;
+    opacity: var(--general-opacity);
+}
+button:focus,
+.button:focus {
+    border: var(--border-width) solid var(--focus-button-color);
+    cursor: pointer;
+    opacity: var(--general-opacity);
+}
+button:active,
+.button:active {
+    background-color: var(--active-button-color);
+}
+.button__secondary {
+    background-color: var(--secondary-color);
+}
+
+/* HEADER SELECTORS */
+.page-header {
+    display: flex;
+    width: 100%;
+    padding-top: var(--general-padding);
+    padding-bottom: var(--general-padding);
+}
+.page-header__item {
+    flex: 0 1 200px;
+}
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+.navigation-list {
+    list-style-type: none;
+    /* This line removes the bullets */
+}
+.navigation-list li {
+    /* Displays list items in a horizontal line */
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/* PROFILE BODY SELECTORS */
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.profile_portrait {
+    float: left;
+    height: auto;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+/* ABOUT PAGE BODY SELECTORS */
+.about-body {
+    margin: 0 auto;
+    text-align: center;
+}
+.about-list {
+    list-style-type: none;
+    /* This line removes the bullets */
+    padding: 0;
+    margin: 0;
+    /* TWO LINES REMOVE DEFAULT PADDING OF THE LIST */
+}
+.skills-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOOTER SELECTORS */
+.page-footer {
+    clear: both;
+    /*both clears all floats, right and left*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: var(--general-padding);
+} 
+
+/* Grid CSS Formatting */
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--general-grid-gap);
+    /* Rows we are allowing to default as this is
+    often good practice */
+}
+.grid__item {
+    background-color: var(--grid-color);
+    padding: var(--general-padding);
+}
+.grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+
+/* Grid media queries */
+
+/* KEYFRAME RULES FOR ANIMATIONS */
+/* color-change is the name that we have given to 
+this animation. This will change the sun color. */
+@keyframes color-change {
+    0% {
+        fill: var(--sunstate-initial);
+    }
+    50% {
+        fill: var(--sunstate-intermediary);
+    }
+    100% {
+        fill: var(--sunstate-final);
+    }
+}
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+/* Keyframe for moving the clouds */
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Changes to 1 column when screen is under 
+500px, add to the full grid and the last child of 
+grid__item. Change the font size to 22px when under
+as well */
+@media all and (max-width: 750px) {
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+        font-size: var(--h2__size);
+    }
+    .project-list {
+        grid-gap: 10px;
+    }
+}
+@media all and (max-width: 600px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    }
+@media all and (min-width: 600px) and (max-width: 750px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}

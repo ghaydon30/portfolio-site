@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This code is laid from exercise 1.3-->
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="viewport" 
+    content="width=devicewidth, initial-scale=1">
+    <!-- ^ This allows the page to adjust for differet
+    pixel size displays-->
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+    <!--This last link connects the the styles.css sheet-->
+</head>
+
+<body>
+    <header class="page-header">
+        <!-- Place header items in here -->
+            <img src="img/logo.svg" 
+            class="page-header__item" alt="logo">
+                <!-- The above code is a placeholder image for the top left website logo (displayed as name on example),
+                    img src "then url source goes in quotes" and alt gives text that will be displayed in it's place
+                    in a particular size -->
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">My Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                </ul>
+                <!-- The above code is a menu bar for the site, a href= creates a hyperlink with given text,
+                    <ul> and <li> elements make up the list -->
+            </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        
+        <h1>Work</h1>
+
+        <div class="project-list">
+
+            <div class="grid__item">
+                <h2>Lorem Ipsum 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#">See project on Github</a>
+            </div>
+            <div class="grid__item">
+                <h2>Lorem Ipsum 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#">See project on Github</a>
+            </div>
+            <div class="grid__item">
+                <h2>Lorem Ipsum 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#">See project on Github</a>
+            </div>
+            <div class="grid__item">
+                <h2>Lorem Ipsum 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#">See project on Github</a>
+            </div>
+            <div class="grid__item">
+                <h2>Lorem Ipsum 5</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#">See project on Github</a>
+            </div>
+            <div class="grid__item">
+                <h2>Lorem Ipsum 6</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#">See project on Github</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer with links to social medie profiles -->
+    <footer class="page-footer">
+        <!-- Place footer text in here -->
+            <p>Find me on</p>
+            <div class="social_media">
+            <img src="./img/github_icon.svg" alt="github">
+            <img src="./img/twitter_icon.svg" alt="twitter">
+            <img src="./img/linkedin_icon.svg" alt="linkedIn">
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
